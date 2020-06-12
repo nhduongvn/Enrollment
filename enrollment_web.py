@@ -9,7 +9,7 @@ def load_data(nrows):
 dat = load_data(10000)
 
 st.header('Predict economic disadvantage student enrollment for Boston metro school districts')
-st.subheader('test')
+st.subheader('Enter district name:')
 district_name = st.text_input("District name", "")
 ed_pre = dat.loc[(dat['district']==district_name) & (dat['schoolyear']=='2018-19')]['ed_li_pct_pred']
 if district_name != "":
